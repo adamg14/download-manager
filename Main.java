@@ -9,5 +9,10 @@ class Main{
         String userInput = scanner.nextLine();
         System.out.println(userInput);
         int numberOfFiles = Integer.parseInt(userInput);
+
+        for(int i = 1; i <= numberOfFiles; i++){
+            DownloadFile downloadFileInstance = new DownloadFile(i);
+            downloadFileInstance.start();
+        }
     }
 }
